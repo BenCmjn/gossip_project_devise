@@ -1,4 +1,4 @@
-#[GO HEROKU](https://ben-gossip-devise.herokuapp.com)
+# [GO HEROKU](https://ben-gossip-devise.herokuapp.com)
 
 Vous pouvez essayer de naviguer par l'url pour acceder à une page sans être loggué. (N'affichera pas les gossips)
 
