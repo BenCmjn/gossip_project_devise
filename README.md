@@ -1,24 +1,16 @@
-# README
+#[GO HEROKU](https://ben-gossip-devise.herokuapp.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Vous pouvez essayer de naviguer par l'url pour acceder à une page sans être loggué. (N'affichera pas les gossips)
 
-Things you may want to cover:
+Vous pouvez créer un compte ou essayer avec un de ceux-ci (whitelist) :
 
-* Ruby version
+| email             | mot de passe       |
+| :---------------- |:-------------------|
+| bonjour@mail.com  | bonjour            |
+| felix@thp.com     | fefefe             |
+| charles@thp.com   | chacha             |
+| yolo@mail.com     | yoyololo           |
 
-* System dependencies
+On retrouve la white list (hyper à l'arrache, j'avoue) dans le model Moussaillon
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+:grimacing: @Ben Cmjn su Slack :wink: 

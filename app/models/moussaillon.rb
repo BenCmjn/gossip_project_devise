@@ -8,7 +8,7 @@ class Moussaillon < ApplicationRecord
   before_validation :whitelisted
 
   def whitelisted
-  	vip_email = ["bonjour@mail.com", "felix@thp.com","charles@thp.com"]
+  	vip_email = ["bonjour@mail.com", "felix@thp.com","charles@thp.com","yolo@mail.com"]
     unless vip_email.include? email
       errors.add :email, "#{email} is not on our invitation list"  
     end

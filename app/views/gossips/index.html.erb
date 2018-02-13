@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Gossips</h1>
-
+<% if moussaillon_signed_in? %>
 <table>
   <thead>
     <tr>
@@ -25,3 +25,6 @@
 <br>
 
 <%= link_to 'New Gossip', new_gossip_path %>
+<% else %>
+<p>Bien essayé !</p>
+<% end %>

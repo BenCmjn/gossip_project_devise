@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if moussaillon_signed_in? %>
 <p>
   <strong>Content:</strong>
   <%= @gossip.content %>
@@ -7,3 +7,6 @@
 
 <%= link_to 'Edit', edit_gossip_path(@gossip) %> |
 <%= link_to 'Back', gossips_path %>
+<% else %>
+<p>Bien essayé !</p>
+<% end %>
