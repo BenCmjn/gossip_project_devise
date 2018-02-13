@@ -2,7 +2,8 @@
 
 Vous pouvez essayer de naviguer par l'url pour acceder à une page sans être loggué. (N'affichera pas les gossips)
 
-Vous pouvez créer un compte ou essayer avec un de ceux-ci (whitelist) :
+Vous pouvez essayer de créer un compte et vous casser les dents (blacklist)
+ou essayer avec un de ceux-ci (whitelist) :
 
 | email             | mot de passe       |
 | :---------------- |:-------------------|
