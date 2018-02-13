@@ -25,6 +25,7 @@ class GossipsController < ApplicationController
   # POST /gossips.json
   def create
     @gossip = Gossip.new(gossip_params)
+    @gossip.author = current_moussaillon
 
     respond_to do |format|
       if @gossip.save
