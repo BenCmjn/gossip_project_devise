@@ -2,13 +2,30 @@
   <h1>Les Gossips exclusifs de THP</h1>
   <h2>Les meilleurs gossipeurs se retrouvent ici </h2>
   <% if moussaillon_signed_in? %>
-    <ul>
-    	<% @gossips.each do |gossip| %>
-    	<li><%= gossip.content %></li>
-    	<% end %>
-    </ul>
-  <% else %>
-    <%= link_to "Se connecter pour accéder au club", new_moussaillon_session_path, class: "btn btn-lg btn-primary" %>
-      <%= link_to "S'inscrire pour accéder au club", new_moussaillon_registration_path, class: "btn btn-lg btn-primary" %>
-  <% end %>
+  	<%= link_to "Écrire un gossip", new_gossip_path, class: "btn btn-lg btn-primary" %>
+  	
+  	<table class="table table-hover">
+  		<tr>
+  			<th>Gossip</th>
+  			<th>Auteur</th>
+  			<th>Date</th>
+  		</tr>
+    	<tr><% @gossips.each do |gossip|  %>
+        <% moussaillonid = gossip.moussaillon_id %>
+	    	<td> <%= gossip.content %></td>
+	    	<td><%= @moussaillons.find(moussaillonid).anonymous_username %></td>
+	    	<td> <%= gossip.created_at %></td>
+	    	
+	    	<% if moussaillonid == current_moussaillon.id %>
+	    	<td><%= link_to "Suppr", gossip, :method=> :delete , class: "btn btn-sm btn-danger" %>
+	    	</td>
+    	<%end%></tr>
+    <%end%>
+    </table>
 </div>
+
+<% else %>
+    <%= link_to "Se connecter", new_moussaillon_session_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "S'inscrire", new_moussaillon_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+

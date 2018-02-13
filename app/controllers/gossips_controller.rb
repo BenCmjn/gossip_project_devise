@@ -29,7 +29,7 @@ class GossipsController < ApplicationController
 
     respond_to do |format|
       if @gossip.save
-        format.html { redirect_to @gossip, notice: 'Gossip was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Gossip was successfully created.' }
         format.json { render :show, status: :created, location: @gossip }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class GossipsController < ApplicationController
   def update
     respond_to do |format|
       if @gossip.update(gossip_params)
-        format.html { redirect_to @gossip, notice: 'Gossip was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Gossip was successfully updated.' }
         format.json { render :show, status: :ok, location: @gossip }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class GossipsController < ApplicationController
   def destroy
     @gossip.destroy
     respond_to do |format|
-      format.html { redirect_to gossips_url, notice: 'Gossip was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Gossip was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
