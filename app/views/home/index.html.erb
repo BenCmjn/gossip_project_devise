@@ -1,0 +1,14 @@
+<div class="center jumbotron">
+  <h1>Les Gossips exclusifs de THP</h1>
+  <h2>Les meilleurs gossipeurs se retrouvent ici </h2>
+  <% if moussaillon_signed_in? %>
+    <ul>
+    	<% @gossips.each do |gossip| %>
+    	<li><%= gossip.content %></li>
+    	<% end %>
+    </ul>
+  <% else %>
+    <%= link_to "Se connecter pour accéder au club", new_moussaillon_session_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "S'inscrire pour accéder au club", new_moussaillon_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>
